@@ -1,4 +1,10 @@
-import {combineReducers} from "redux"
-import count from './count'
+export const INCREMENT = 'INCREMENT'
+export const DECREMENT = 'DECREMENT'
 
-export default combineReducers({count})
+export const increment = () =>({
+    type: INCREMENT
+})
+
+export const decrement = () => ({
+    type: DECREMENT
+})
