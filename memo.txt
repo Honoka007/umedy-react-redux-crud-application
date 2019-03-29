@@ -1,0 +1,5 @@
+ curlでのAPIリクエスト
+ curl -v https://udemy-utils.herokuapp.com/api/v1/events?token=token123
+
+ curlでのAPIリクエスト(id1)のみ
+ curl -v https://udemy-utils.herokuapp.com/api/v1/events/1?token=token123
