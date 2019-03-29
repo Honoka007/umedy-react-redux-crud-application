@@ -22,5 +22,5 @@ const mapDispatchToProps = dispatch => ({
   decrement: () => dispatch(decrement())
 })
 
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(EventsIndex);
 
