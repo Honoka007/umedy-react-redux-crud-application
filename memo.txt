@@ -1,3 +1,7 @@
+ yarn立ち上げ
+ yarn start
+
+
  curlでのAPIリクエスト
  curl -v https://udemy-utils.herokuapp.com/api/v1/events?token=token123
 
