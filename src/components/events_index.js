@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import _ from 'lodash'
@@ -9,10 +10,9 @@ class EventsIndex extends Component {
     componentDidMount(){
         this.props.readEvents()
     }
-
-    renderEvents() {
+    renderEvents(){
         return _.map(this.props.events, event => (
-            <tr key={event.id}>
+            <tr>
                 <td>{event.id}</td>
                 <td>{event.title}</td>
                 <td>{event.body}</td>
@@ -20,22 +20,25 @@ class EventsIndex extends Component {
         ))
     }
 
-    render() {
+    render(){// eslint-disable-next-line
+        const props = this.props
+
         return (
                 <table>
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Title</th>
-                            <th>Body</th>
+                            <th>TITLE</th>
+                            <th>BODY</th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.renderEvents()}
                     </tbody>
                 </table>
-        );
+        )
     }
+
 }
 
 const mapStateToProps = state => ({events: state.events})

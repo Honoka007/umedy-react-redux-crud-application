@@ -1,6 +1,11 @@
  yarn立ち上げ
  yarn start
 
+ yarn add axios
+ 外部サーバへhttpsリクエスト送る
+ yarn add redux-thunk
+ 非同期処理を実装
+
 
  curlでのAPIリクエスト
  curl -v https://udemy-utils.herokuapp.com/api/v1/events?token=token123

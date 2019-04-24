@@ -1,12 +1,14 @@
+// axios→ブラウザやnode.js-version7以降で動くHTTPクライアント
+// Web APIを実行
 import axios from 'axios'
+
 export const READ_EVENTS = 'READ_EVENTS'
 
-const ROOT_URL = 'https://udemy-utils.herokuapp.com/api/v1'
+const ROOT_URL = 'https://udemy-utils.herokuapp.com/api/v1/'
 const QUERYSTRING = '?token=token123'
 
 export const readEvents = () => async dispatch => {
-    const response = await axios.get(`${ROOT_URL}/events${QUERYSTRING}}`)
+    const response = await axios.get(`${ROOT_URL}/events${QUERYSTRING}`)
+    dispatch ({type: READ_EVENTS, response})
     console.log(response);
-    dispatch({type: READ_EVENTS, response})
 }
-
